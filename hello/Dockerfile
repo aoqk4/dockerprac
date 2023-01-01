@@ -10,10 +10,10 @@ RUN apt update
 RUN apt install -y gcc
 WORKDIR /tmp
 ADD hello.c ./
-RUN GCC hello.c -static -o hello
+RUN gcc hello.c -static -o hello
 
 FROM alpine:3.16.2
 WORKDIR /tmp
 COPY --from=builder /tmp/hello ./
 
-CMD["/tmp/hello"]
+CMD ["/tmp/hello"]
