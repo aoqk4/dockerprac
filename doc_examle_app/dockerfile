@@ -1,0 +1,9 @@
+FROM node:16-alpine
+
+ADD ./ /var/www/doc_example_app
+WORKDIR /var/www/doc_example_app
+
+RUN npm install
+RUN npm run build
+
+CMD ["npm","run","start"]

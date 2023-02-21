@@ -1,5 +1,5 @@
 # 제외하고 싶은 파일이 있으면 사용한다. (go 기반 )
-
+node_modules
 example/hello.txt
 example/*.cpp
 wo*
